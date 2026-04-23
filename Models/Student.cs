@@ -4,18 +4,15 @@ using System.Text;
 
 namespace ExamCenterSystem.Models
 {
-    // 🧠 INHERITANCE HERE
     public class Student : Person
     {
+        public int Id { get; set; }
         public string Department { get; set; }
-        public int Semester { get; set; }
+        public string Semester { get; set; }
 
-        // 🎯 POLYMORPHISM (METHOD OVERRIDE)
         public override void ShowInfo()
         {
-            System.Console.WriteLine(
-                $"Name: {Name}, Roll: {RollNumber}, Dept: {Department}, Sem: {Semester}"
-            );
+            Console.WriteLine($"ID: {Id} | Name: {Name} | Roll: {RollNumber} | Dept: {Department} | Sem: {Semester}");
         }
     }
 }

@@ -1,16 +1,14 @@
-﻿using System;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.Sqlite;
 
 namespace ExamCenterSystem.Data
 {
     public static class DbConnection
     {
-        // Change this connection string according to your SQL Server
-        private static readonly string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=ExamCenterDB;Trusted_Connection=True;";
-
-        public static SqlConnection GetConnection()
+        public static SqliteConnection GetConnection()
         {
-            return new SqlConnection(connectionString);
+            // SQLite database file - container ke andar /app folder mein
+            string connectionString = "Data Source=examcenter.db";
+            return new SqliteConnection(connectionString);
         }
     }
 }
