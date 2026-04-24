@@ -86,7 +86,6 @@ ExamCenterSystem/
 👩‍💻 **Author**
 Ayesha Yasmim
 🎓 BSCS | Semester 6A
-📧 ayeshayasmen347@gmail.com
-### Locally
+📧 ayeshayasmeen347@gmail.com
 ```bash
 dotnet run
