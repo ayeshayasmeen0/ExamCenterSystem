@@ -1,133 +1,92 @@
-# 🎓 Exam Center System
+ 📚 **Exam Center Management System**
 
-A console-based **Exam Center Management System** developed using **C# (.NET 8)** and **Object-Oriented Programming (OOP)** concepts. This project manages students, exams, seating, and results efficiently.
+A complete console-based application to manage students, exams, seats, and results for exam centers.
 
----
+🚀 **Technologies Used**
 
-## 📌 Features
+| Technology | Purpose |
+|------------|---------|
+| 🟣 .NET 8 | Application Framework |
+| 💻 C# | Programming Language |
+| 🗄️ SQLite | File-based Database |
+| 🐳 Docker | Containerization |
+| 📦 Git & GitHub | Version Control |
 
-* 👨‍🎓 Student Registration & Management
-* 📝 Exam Creation & Handling
-* 💺 Seat Allocation System
-* 📊 Result Calculation & Display
-* 🔐 Admin Controls
-* 🐳 Docker Support (Run Anywhere)
 
----
+✨ **Features**
 
-## 🛠️ Technologies Used
+### 👨‍🎓 Students
+- Add, View, Update, Delete Students
+- Reset Students (ID starts from 1)
 
-* C# (.NET 8)
-* OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)
-* SQL Database (via DbConnection)
-* Docker
-* Visual Studio / VS Code
+📝 **Exams**
+- Add, View, Update, Delete Exams
+- Reset Exams
 
----
+💺 **Seats**
+- Department-wise allocation (CS, SE, IT, DS)
+- 20 students per room (4×5 grid)
+- Visual room layout
+- View by department
+- Update & Delete seats
 
-## 📂 Project Structure
+📊 **Results**
+- Add results with auto grade calculation
+- Grades: A+, A, B+, B, C+, C, D, F
+- Statistics (total, average, highest, lowest)
+- Update & Delete results
 
-```
+🔐 **Admin**
+- Secure login: `admin` / `1234`
+- Password masking
+
+
+🧠 **OOP Concepts**
+
+| Concept | How Used |
+|---------|----------|
+| 🔒 Encapsulation | Private data with public methods |
+| 👪 Inheritance | Student inherits from Person |
+| 🎭 Polymorphism | GetGrade() changes with marks |
+| 🫥 Abstraction | Services hide database logic |
+
+**With Docker**
+bash
+docker build -t examcentersystem:latest .
+docker run -it --rm examcentersystem:latest
+
+🐳 **Docker Commands**
+Command	What it does
+docker build -t examcentersystem:latest .	Build image
+docker run -it --rm examcentersystem:latest	Run container
+docker ps	See running containers
+docker images	See all images
+
+📊 **Grade System**
+Marks	Grade
+90-100	A+
+80-89	A
+75-79	B+
+70-74	B
+60-69	C+
+50-59	C
+40-49	D
+Below 40	F
+
+📁 **Project Structure**
+text
 ExamCenterSystem/
-│
-├── Data/
-│   ├── DbConnection.cs
-│   └── DbInitializer.cs
-│
-├── Models/
-│   ├── Person.cs
-│   ├── Student.cs
-│   └── Exam.cs
-│
-├── Services/
-│   ├── AdminService.cs
-│   ├── ExamService.cs
-│   ├── ResultService.cs
-│   ├── SeatService.cs
-│   └── StudentService.cs
-│
-├── Program.cs
-└── Dockerfile
-```
+├── 📂 Data/        # Database connection
+├── 📂 Models/      # Student, Exam, Seat, Result classes
+├── 📂 Services/    # Business logic
+├── 📄 Program.cs   # Main menu
+├── 🐳 Dockerfile   # Docker config
+└── 📖 README.md    # This file
 
----
-
-## 🧠 OOP Concepts Used
-
-### 🔒 Encapsulation
-
-Data is hidden inside classes using properties (e.g., Student, Exam).
-
-### 🧬 Inheritance
-
-`Student` class inherits from `Person`.
-
-### 🔁 Polymorphism
-
-Different services perform operations in their own way.
-
-### 🎭 Abstraction
-
-Service layer hides implementation details from the main program.
-
----
-
-## ▶️ How to Run (Without Docker)
-
+👩‍💻 **Author**
+Ayesha Yasmim
+🎓 BSCS | Semester 6A
+📧 ayeshayasmen347@gmail.com
+### Locally
 ```bash
-dotnet build
 dotnet run
-```
-
----
-
-## 🐳 Run with Docker
-
-### 1️⃣ Build Docker Image
-
-```bash
-docker build -t examcentersystem .
-```
-
-### 2️⃣ Run Container
-
-```bash
-docker run -it examcentersystem
-```
-
----
-
-## 📸 Sample Output
-
-```
-WELCOME TO EXAM CENTER SYSTEM
-1. Register Student
-2. Manage Exams
-3. View Results
-4. Exit
-```
-
----
-
-## 📈 Future Improvements
-
-* GUI (Windows Forms / Web App)
-* Online Exam Feature
-* Authentication System
-* Advanced Reporting
-
----
-
-## 👩‍💻 Author
-
-**Ayesha Yasmin**
-BSCS – Semester 6A
-Registration No: 232201023
-
----
-
-## ⭐ Note
-
-This project is developed for educational purposes to demonstrate **OOP concepts and system design** in C#.
-
----
